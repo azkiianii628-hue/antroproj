@@ -1,0 +1,389 @@
+/* ════════════════════════════════════════
+   style.css — Budaya Nusantara
+   ════════════════════════════════════════ */
+
+/* ── RESET & GLOBAL ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #f5f0e8;
+  --orange-tint: rgba(200, 100, 20, 0.55);
+  --white: #ffffff;
+  --dark: #1a1a1a;
+  --gold: #c8640f;
+  --border: #e0d8cc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Lato', sans-serif;
+  color: var(--dark);
+}
+
+
+/* ════════════════════════════════════════
+   HERO BANNER
+   ════════════════════════════════════════ */
+.hero {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  /* Ganti baris di bawah dengan foto kamu: */
+  /* background-image: url('foto-kamu.jpg'); */
+  background: linear-gradient(135deg, #3b1f0a 0%, #7a4010 25%, #c47830 50%, #8b5020 75%, #2a1205 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  color: var(--white);
+}
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 600px;
+  text-shadow: 0 3px 20px rgba(0,0,0,0.4);
+  margin-bottom: 14px;
+}
+
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+
+/* ════════════════════════════════════════
+   CATEGORY CARDS
+   ════════════════════════════════════════ */
+.cards-section {
+  padding: 50px 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-decoration: none;
+  display: block;
+}
+
+.card-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .card-photo {
+  transform: scale(1.07);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--orange-tint);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.card-border {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255,255,255,0.5);
+  z-index: 2;
+  pointer-events: none;
+  transition: inset 0.4s ease;
+}
+
+.card:hover .card-border {
+  inset: 18px;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 3;
+  color: var(--white);
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  margin-bottom: 6px;
+}
+
+.card-sub {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0.88;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+/* Warna background placeholder tiap kartu */
+.card--betawi .card-photo {
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 40%, #6b3a2a 100%);
+}
+
+.card--flores .card-photo {
+  background: linear-gradient(160deg, #5a3010 0%, #c45b20 50%, #3d1f0a 100%);
+}
+
+.card--tionghoa .card-photo {
+  background: linear-gradient(120deg, #6b1010 0%, #c43030 50%, #3a0a0a 100%);
+}
+
+/* Bar "Baca Selengkapnya" saat hover */
+.card::after {
+  content: 'Baca Selengkapnya →';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(200,100,15,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  z-index: 4;
+}
+
+.card:hover::after {
+  height: 42px;
+}
+
+
+/* ════════════════════════════════════════
+   NEWS / ARTICLE SECTIONS
+   ════════════════════════════════════════ */
+.news-section {
+  padding: 70px 60px;
+  border-top: 2px solid var(--border);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 3px 9px;
+  border-radius: 2px;
+}
+
+/* Layout artikel: foto kiri, teks kanan */
+.article-single {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.article-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.article-single:hover .article-thumb img {
+  transform: scale(1.04);
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.article-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.article-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--dark);
+}
+
+.article-excerpt {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  font-weight: 300;
+}
+
+.article-meta {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.5px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.read-more:hover {
+  opacity: 0.65;
+}
+
+
+/* ════════════════════════════════════════
+   BACK TO TOP
+   ════════════════════════════════════════ */
+.back-to-top {
+  display: block;
+  text-align: center;
+  padding: 40px 0 60px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.back-to-top:hover {
+  opacity: 0.65;
+}
+
+
+/* ════════════════════════════════════════
+   RESPONSIVE (layar kecil / HP)
+   ════════════════════════════════════════ */
+@media (max-width: 760px) {
+  .hero {
+    height: 320px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-content {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .cards-section {
+    padding: 30px 16px;
+    gap: 14px;
+  }
+
+  .card {
+    width: 100%;
+    height: 240px;
+  }
+
+  .news-section {
+    padding: 50px 20px;
+  }
+
+  .article-single {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

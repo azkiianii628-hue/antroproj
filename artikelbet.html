@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Suku Betawi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #f5f0e8;
+            --white: #ffffff;
+            --dark: #1a1a1a;
+            --gold: #c8640f;
+            --border: #e0d8cc;
+        }
+
+        body {
+            background-color: var(--cream);
+            font-family: 'Lato', sans-serif;
+            color: var(--dark);
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            padding: 20px 60px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .navbar-back {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .navbar-back:hover {
+            opacity: 0.65;
+        }
+
+        /* ── ARTIKEL ── */
+        .article-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+        }
+
+        /* Label kategori */
+        .article-category {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        /* Judul utama — GANTI teks di sini */
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Sub-judul/ringkasan singkat — GANTI teks di sini */
+        .article-lead {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #444;
+            border-left: 3px solid var(--gold);
+            padding-left: 18px;
+            margin-bottom: 28px;
+        }
+
+        /* Info tanggal & penulis */
+        .article-meta {
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 0.5px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        /* Foto utama artikel */
+        .article-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .article-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Keterangan foto */
+        .article-caption {
+            font-size: 11px;
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        /* Isi paragraf artikel — GANTI teks di sini */
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #333;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        /* Sub-judul dalam artikel */
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 40px 0 16px;
+        }
+
+        /* Quote/kutipan */
+        .article-body blockquote {
+            border-left: 3px solid var(--gold);
+            padding: 12px 20px;
+            margin: 32px 0;
+            background: rgba(200, 100, 15, 0.05);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .article-body blockquote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0;
+        }
+
+        /* Garis penutup */
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: #bbb;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Budaya Nusantara</a>
+        <a class="navbar-back" href="index.html">← Kembali</a>
+    </nav>
+
+    <!-- ARTIKEL -->
+    <div class="article-wrapper">
+
+        <!-- Kategori -->
+        <div class="article-category">Budaya · Suku Betawi</div>
+
+        <!-- ✏️ GANTI: Judul artikel -->
+        <h1 class="article-title">
+            Palang Pintu dalam Dimensi Budaya Suku Betawi Di Jakarta
+        </h1>
+
+        <!-- ✏️ GANTI: Ringkasan singkat (1-2 kalimat) -->
+        <p class="article-lead">
+            Di tengah gemerlap modernitas Jakarta, budaya Betawi tetap berdiri kokoh sebagai identitas asli Ibu Kota
+            lahir dari perpaduan beragam etnis, kaya akan nilai toleransi.
+        </p>
+
+        <!-- ✏️ GANTI: Tanggal dan nama penulis -->
+        <div class="article-meta">
+            14 Mei 2026 &nbsp;·&nbsp; Ditulis oleh <strong>Windy</strong>
+        </div>
+
+        <!-- ✏️ GANTI: Foto utama — ubah src="foto-betawi.jpg" dengan nama foto kamu -->
+        <div class="article-cover">
+            <img src="fotobersamabet.jpeg" alt="Foto Suku Betawi" />
+        </div>
+
+        <!-- ✏️ GANTI: Keterangan foto -->
+        <p class="article-caption">Foto Bersama Ani dan Rafelia mewawancarai Bang Ucup Perwakilan Sanggar Si Pitung Rawa
+            Belong</p>
+
+        <!-- ISI ARTIKEL -->
+        <div class="article-body">
+
+            <!-- ✏️ GANTI: Paragraf 1 -->
+            <p>
+
+                Di tengah hiruk-pikuk Jakarta yang metropolitan, budaya Betawi tetap hidup sebagai akar
+                identitas ibu kota. Berdasarkan wawancara mendalam dengan narasumber bernama Ucup, yang juga dikenal
+                sebagai pegiat budaya, serta merujuk pada berbagai sumber sejarah dan budaya, terungkap bagaimana
+                masyarakat Betawi mempertahankan nilai-nilai luhur di tengah arus modernisasi.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional, bisa dihapus kalau tidak perlu) -->
+            <h2>Membuka Diri, Tetap Berpegang Teguh pada Prinsip
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 2 -->
+            <p>
+                Salah satu keistimewaan masyarakat Betawi adalah keterbukaannya terhadap pendatang. Hal ini tidak lepas
+                dari sejarah Jakarta sebagai kota pelabuhan yang telah menjadi melting pot berbagai suku bangsa sejak
+                era Sunda Kelapa, Batavia, hingga Jayakarta. Sejarah mencatat, suku Betawi lahir dari asimilasi berbagai
+                etnis seperti Sunda, Jawa, Melayu, Bugis, Ambon, Arab, Tionghoa, hingga Eropa.
+            </p>
+
+            <!-- ✏️ GANTI: Kutipan (opsional, bisa dihapus) -->
+            <blockquote>
+                <p>“Kalau di Betawi, dia merangkul berbagai macam suku-suku yang ada di Indonesia,” ujar Bang Ucup.
+                </p>
+            </blockquote>
+
+            <!-- ✏️ GANTI: Paragraf 3 -->
+            <p>
+                Ia menjelaskan bahwa kehidupan di tanah Betawi tercermin dari dinamika di kontrakan-kontrakan yang
+                dihuni beragam suku. “Ada suku Jawa, suku Sunda, suku Padang, ada juga dari Batak. Pada ngontrak, pada
+                ngumpul,” tambahnya.
+                Meski terbuka, masyarakat Betawi tetap menjunjung tinggi nilai agama dan adat. Prinsip “di mana bumi
+                dipijak, di situ langit dijunjung” menjadi pegangan. Bang Ucup menegaskan, “Dimana kalian tinggal, kalau
+                emang ada budaya, kita harus taati, kita harus pelajarin, dan kita harus cinta sama budaya itu.”
+                Wikipedia mencatat, 97,1% orang Betawi menganut Islam Sunni, yang menjadi salah satu sumber identitas
+                dan budaya yang tidak terpisahkan. Situs Budaya Betawi IKJ juga menambahkan, kesadaran sebagai "orang
+                Betawi" sebagai entitas sosial yang khas mulai menguat pada pertengahan abad ke-19.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Penduduk Inti Jakarta
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Serbuan urbanisasi pasca kemerdekaan menjadikan suku Betawi sebagai minoritas di kotanya sendiri. Namun,
+                mereka tetaplah penduduk asli dan inti Jakarta. Bang Ucup menjelaskan, “Penduduk inti di Jakarta itu
+                adalah penduduk Betawi.” Ia menelusuri sejarah perubahan nama dari Sunda Kelapa, Jayakarta, hingga
+                Jakarta kini.
+                “Dulu sebelum Betawi ada Batavia, sebelum Batavia ada Sunda Kelapa. Di perangin Fatahillah, dinamakan
+                Jayakarta,” jelasnya.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Filosofi Janur Sebagai Simbol Komitmen yang Kuat
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Dalam tradisi Betawi, janur kuning bukan sekadar hiasan, melainkan simbol komitmen yang mendalam.
+                Ungkapan “sebelum janur kuning melengkung” menandai batas sebelum seseorang terikat dalam pernikahan.
+                Menurut Bang Ucup, janur atau kembang kelapa mencerminkan filosofi pemanfaatan total, sebagaimana pohon
+                kelapa yang seluruh bagiannya berguna. Dari daun hingga batang, tak ada yang terbuang. Filosofi ini
+                menggambarkan bahwa komitmen dalam adat Betawi harus dijalani secara utuh, penuh kesungguhan, dan tidak
+                setengah-setengah.
+
+                Sejalan dengan itu, dalam tradisi Jawa, ungkapan “sebelum janur kuning melengkung” juga merujuk pada
+                kondisi seseorang yang belum menikah, sehingga masih memiliki kebebasan dan peluang dalam menentukan
+                pasangan hidup. Sementara ketika janur kuning telah melengkung, hal tersebut menjadi simbol bahwa
+                seseorang telah memasuki ikatan pernikahan yang sakral. Dengan demikian, baik dalam budaya Betawi maupun
+                Jawa, janur kuning sama-sama dimaknai sebagai lambang komitmen, kesucian, dan keseriusan dalam membangun
+                kehidupan rumah tangga.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Palang Pintu
+
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Tradisi Palang Pintu dalam pernikahan adat Betawi bukan sekadar hiburan, melainkan ujian kesiapan. Bang
+                Ucup mengungkapkan filosofi di balik aksi adu pantun dan silat tersebut.
+                “Palang pintu itu prosesi perkawinan adat Betawi, di dalamnya ada tukang pantun, silat, dan adu pantun.
+                Sebelum pihak tamu mendapatkan tuan rumah, pertama dia harus bisa silat, kedua dia harus bisa ngaji,”
+                jelasnya.
+                Ia menekankan, ini adalah cara orang Betawi mengatakan bahwa seseorang harus siap secara fisik dan
+                spiritual. “Berarti dia siap yang mengatakan itu benar, mengatakan itu salah,” imbuhnya.
+                Pelestarian tradisi ini bahkan telah meluas. Kini, Palang Pintu tidak hanya digelar di pesta pernikahan,
+                tetapi juga di acara peresmian kantor, serah terima jabatan, hingga sunatan. “Biar lestari budaya
+                Betawi,” ucap Bang Ucup.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Ondel-Ondel
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Pergeseran makna paling terlihat pada ondel-ondel. Dikenal sebagai barongan pada masa lalu, ondel-ondel
+                berfungsi sebagai penolak bala. Kini, boneka besar ini sering terlihat mengamen di jalanan sebagai
+                sarana hiburan dan ekonomi.
+                “Dulu tuh ondel-ondel namanya barongan, buat nolak bala. Mukanya serem, tingginya tinggi. Sekarang
+                karena zaman modern, budaya juga harus mengikuti zaman. Dihiaslah ondel-ondel sebagaimana dia menjadi
+                salah satu ikon Betawi,” tutur Bang Ucup.
+                Namun, ia prihatin dengan maraknya ondel-ondel yang disalahgunakan untuk mengamen.
+                <blockquote>
+                    <p>“Saya ingetin, kalau
+                        bisa ondel-ondel itu jangan ngamen. Sebenarnya itu nggak boleh, itu salah satu ikon budaya yang harus
+                        kita lestarikan,” tegas Bang Ucup.
+                    </p>
+                </blockquote> 
+                </p>
+
+                <p>
+                Bang Ucup juga mengungkapkan bahwa Pemerintah Provinsi DKI Jakarta telah mengeluarkan Peraturan Daerah
+                (Perda) yang mewajibkan setiap gedung, hotel, atau sekolah untuk memiliki ondel-ondel. “Itu udah masuk
+                dalam Perda. Mudah-mudahan pemerintah bisa ngelirik, bisa ngeliat budaya Betawi, jangan sampai jadi tamu
+                di rumahnya sendiri,” pungkasnya.
+                Jika tidak dilestarikan, ia khawatir ondel-ondel dan budaya Betawi lainnya akan hilang. “Kalau
+                ondel-ondel nggak dilestarikan, ya bakal hilang, bakal punah. Sama juga dengan budaya-budaya lain.”
+            </p>
+            
+        </div>
+
+        <!-- Footer artikel -->
+        <div class="article-footer">
+            Budaya Nusantara &nbsp;·&nbsp; Suku Betawi
+        </div>
+
+    </div>
+
+</body>
+
+</html>

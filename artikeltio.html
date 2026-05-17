@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Suku Tionghoa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #f5f0e8;
+            --white: #ffffff;
+            --dark: #1a1a1a;
+            --gold: #c8640f;
+            --border: #e0d8cc;
+        }
+
+        body {
+            background-color: var(--cream);
+            font-family: 'Lato', sans-serif;
+            color: var(--dark);
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            padding: 20px 60px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .navbar-back {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .navbar-back:hover {
+            opacity: 0.65;
+        }
+
+        /* ── ARTIKEL ── */
+        .article-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+        }
+
+        /* Label kategori */
+        .article-category {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        /* Judul utama — GANTI teks di sini */
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Sub-judul/ringkasan singkat — GANTI teks di sini */
+        .article-lead {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #444;
+            border-left: 3px solid var(--gold);
+            padding-left: 18px;
+            margin-bottom: 28px;
+        }
+
+        /* Info tanggal & penulis */
+        .article-meta {
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 0.5px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        /* Foto utama artikel */
+        .article-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .article-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Keterangan foto */
+        .article-caption {
+            font-size: 11px;
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        /* Isi paragraf artikel — GANTI teks di sini */
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #333;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        /* Sub-judul dalam artikel */
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 40px 0 16px;
+        }
+
+        /* Quote/kutipan */
+        .article-body blockquote {
+            border-left: 3px solid var(--gold);
+            padding: 12px 20px;
+            margin: 32px 0;
+            background: rgba(200, 100, 15, 0.05);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .article-body blockquote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0;
+        }
+
+        /* Garis penutup */
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: #bbb;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Budaya Nusantara</a>
+        <a class="navbar-back" href="index.html">← Kembali</a>
+    </nav>
+
+    <!-- ARTIKEL -->
+    <div class="article-wrapper">
+
+        <!-- Kategori -->
+        <div class="article-category">Budaya · Suku Betawi</div>
+
+        <!-- ✏️ GANTI: Judul artikel -->
+        <h1 class="article-title">
+            Menjaga Warisan Leluhur di Jantung Pecinan
+        </h1>
+
+        <!-- ✏️ GANTI: Ringkasan singkat (1-2 kalimat) -->
+        <p class="article-lead">
+            Di jantung pecinan Jakarta,masyarakat Tionghoa
+            masih setia menjalankan tradisi leluhur menjaga api penghormatan tetap menyala di tengah arus zaman yang
+            tak pernah berhenti bergerak.
+        </p>
+
+        <!-- ✏️ GANTI: Tanggal dan nama penulis -->
+        <div class="article-meta">
+            14 Mei 2026 &nbsp;·&nbsp; Ditulis oleh <strong>Ravee</strong>
+        </div>
+
+        <!-- ✏️ GANTI: Foto utama — ubah src="foto-betawi.jpg" dengan nama foto kamu -->
+        <div class="article-cover">
+            <img src="sembahayangb.jpg" alt="Foto Suku Betawi" />
+        </div>
+
+        <!-- ✏️ GANTI: Keterangan foto -->
+        <p class="article-caption">Proses Sembahayang yang di lakukan oleh Ravee,Lim dan Chong</p>
+
+        <!-- ISI ARTIKEL -->
+        <div class="article-body">
+
+            <!-- ✏️ GANTI: Paragraf 1 -->
+            <p>
+                Di sudut kota Jakarta yang terus bertumbuh, kawasan Glodok berdiri sebagai saksi bisu perjalanan panjang
+                budaya Tionghoa di tanah Betawi. Meskipun modernisasi terus mengubah wajah fisik kawasan pecinan ini,
+                adat dan tradisi leluhur tetap mengalir deras di tengah kehidupan warga sehari-hari. Berdasarkan
+                wawancara mendalam dengan Wilianto Utama, seorang warga asli Glodok yang telah menyaksikan perubahan
+                kawasan selama puluhan tahun, terungkap bagaimana masyarakat Tionghoa di sini mempertahankan jati diri
+                budaya mereka di era modern.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional, bisa dihapus kalau tidak perlu) -->
+            <h2>Wajah Baru Glodok, Jiwa Lama yang Bertahan
+            </h2>
+
+            <!-- ✏️ GANTI: Paragraf 2 -->
+            <p>
+                Siapa pun yang pernah mengenal Glodok tempo dulu akan merasakan perubahan yang cukup signifikan saat
+                berkunjung hari ini. Deretan pertokoan yang dulunya memancarkan nuansa tradisional kini telah mengalami
+                modernisasi bertahap. Namun di balik fasad baru itu, denyut budaya Tionghoa masih terasa kuat.
+
+
+            </p>
+
+            <!-- ✏️ GANTI: Kutipan (opsional, bisa dihapus) -->
+            <blockquote>
+                <p>"Banyak yang sudah berubah di sini, terutama bangunan-bangunan pertokoan dan lingkungan sekitar
+                    Chinatown. Tapi kalau soal budaya dan adat, itu masih kental, masih terasa."
+                    Tutur Pak Wilianto Utama"</p>
+            </blockquote>
+
+            <!-- ✏️ GANTI: Paragraf 3 -->
+            <p>
+                Demikian tutur pak Wilianto yang telah menyaksikan transformasi kawasan ini dari generasi ke
+                generasi. Menurutnya, pemerintah pun turut ambil bagian dalam menjaga identitas kawasan dengan melakukan
+                revitalisasi agar Glodok tetap mempertahankan nuansa budayanya. Upaya ini, baginya, merupakan angin
+                segar di tengah arus perubahan yang tak terelakkan.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Sembahyang Leluhur</h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Di antara berbagai tradisi yang masih dipertahankan warga Tionghoa Glodok, sembahyang untuk leluhur dan
+                keluarga yang telah meninggal dunia menjadi salah satu yang paling dijaga kelestariannya. Bagi Wilianto,
+                tradisi ini bukan sekadar kewajiban agama, melainkan sebuah ungkapan kasih yang menembus batas kehidupan
+                dan kematian.
+
+            </p>
+
+            <blockquote>
+                <p>Sembahyang leluhur itu bentuk penghormatan kita. Kita tidak boleh lupa kepada orang tua dan nenek
+                    moyang yang sudah berjasa. Dengan begini, generasi muda juga jadi tahu bagaimana cara menghargai
+                    keluarga."
+                </p>
+            </blockquote>
+
+            <p>
+                Tradisi ini tidak hanya memiliki dimensi spiritual semata. Lebih dari itu, sembahyang leluhur menjadi
+                ajang berkumpulnya keluarga besar, mempererat tali silaturahmi yang kadang terputus oleh kesibukan
+                kehidupan modern. Nilai penghormatan kepada orang tua yang hidup maupun yang telah tiada menjadi inti
+                dari ritual ini sebuah nilai yang ingin terus diwariskan kepada generasi berikutnya.
+
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Api yang Membawa Pesan</h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Salah satu bagian paling khas dari tradisi penghormatan leluhur di Glodok adalah ritual pembakaran
+                benda-benda simbolis. Rumah-rumahan miniatur, uang kertas, pakaian, hingga perlengkapan sehari-hari
+                dibakar sebagai simbol pengiriman kepada para leluhur di alam lain. Bagi yang menjalankannya,<strong>
+                    ini bukan
+                    takhayul, melainkan ekspresi kepedulian yang mendalam. </strong>
+                Ritual ini dilakukan pada momen-momen tertentu, seperti saat upacara sembahyang leluhur dan berbagai
+                perayaan tradisional Tionghoa lainnya. Setiap benda yang dibakar memiliki maknanya tersendiri
+                representasi dari harapan agar leluhur yang telah tiada tetap dapat menikmati kehidupan yang layak di
+                alam sana.
+
+            </p>
+
+            <blockquote>
+                <p>"Ini bukan sembarang bakar-bakaran. Ini cara kami bilang bahwa kami masih ingat, masih peduli. Kami
+                    lakukan bersama-sama, sekeluarga, karena memang seperti itulah caranya."
+                    "
+                </p>
+            </blockquote>
+
+            <p> Kegiatan kolektif ini, menurut Wilianto, justru menjadi salah satu perekat hubungan keluarga yang paling
+                efektif. Di tengah kesibukan masing-masing anggota keluarga, momen ritual ini menjadi alasan untuk duduk
+                bersama, mengenang, dan menguatkan ikatan.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Antara Perubahan dan Harapan</h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Kawasan Glodok hari ini adalah potret nyata dari tarik-menarik antara modernisasi dan pelestarian
+                budaya. Revitalisasi fisik yang dilakukan pemerintah membawa harapan baru bagi keberlanjutan kawasan ini
+                sebagai pusat budaya Tionghoa yang hidup dan relevan.
+                Namun Wilianto mengingatkan bahwa bangunan dan infrastruktur hanyalah cangkang. Yang menentukan apakah
+                sebuah kawasan benar-benar hidup adalah manusia dan tradisi yang ada di dalamnya.
+
+            </p>
+
+            <blockquote>
+                <p>"Kalau tempatnya diperindah tapi tradisinya hilang, ya percuma. Yang penting adalah kita tetap jaga
+                    nilai-nilai yang sudah turun-temurun dari leluhur kita." ucap Pak Wilianto Utama
+
+
+                </p>
+            </blockquote>
+
+        </div>
+
+        <!-- Footer artikel -->
+        <div class="article-footer">
+            Budaya Nusantara &nbsp;·&nbsp; Suku Tionghoa
+        </div>
+
+    </div>
+
+</body>
+
+</html>

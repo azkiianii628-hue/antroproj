@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Suku Flores</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #f5f0e8;
+            --white: #ffffff;
+            --dark: #1a1a1a;
+            --gold: #c8640f;
+            --border: #e0d8cc;
+        }
+
+        body {
+            background-color: var(--cream);
+            font-family: 'Lato', sans-serif;
+            color: var(--dark);
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            padding: 20px 60px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .navbar-back {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .navbar-back:hover {
+            opacity: 0.65;
+        }
+
+        /* ── ARTIKEL ── */
+        .article-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
+        }
+
+        /* Label kategori */
+        .article-category {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        /* Judul utama — GANTI teks di sini */
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        /* Sub-judul/ringkasan singkat — GANTI teks di sini */
+        .article-lead {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #444;
+            border-left: 3px solid var(--gold);
+            padding-left: 18px;
+            margin-bottom: 28px;
+        }
+
+        /* Info tanggal & penulis */
+        .article-meta {
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 0.5px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        /* Foto utama artikel */
+        .article-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .article-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Keterangan foto */
+        .article-caption {
+            font-size: 11px;
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        /* Isi paragraf artikel — GANTI teks di sini */
+        .article-body p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #333;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        /* Sub-judul dalam artikel */
+        .article-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 40px 0 16px;
+        }
+
+        /* Quote/kutipan */
+        .article-body blockquote {
+            border-left: 3px solid var(--gold);
+            padding: 12px 20px;
+            margin: 32px 0;
+            background: rgba(200, 100, 15, 0.05);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .article-body blockquote p {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0;
+        }
+
+        /* Garis penutup */
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 11px;
+            color: #bbb;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="index.html">Budaya Nusantara</a>
+        <a class="navbar-back" href="index.html">← Kembali</a>
+    </nav>
+
+    <!-- ARTIKEL -->
+    <div class="article-wrapper">
+
+        <!-- Kategori -->
+        <div class="article-category">Budaya · Suku Flores</div>
+
+        <!-- ✏️ GANTI: Judul artikel -->
+        <h1 class="article-title">
+            Budaya Flores dalam Dimensi Era Globalisasi Masyarakat 5.0 Di Jakarta
+        </h1>
+
+        <!-- ✏️ GANTI: Ringkasan singkat (1-2 kalimat) -->
+        <p class="article-lead">
+            Di tengah arus modernisasi yang terus bergerak, masyarakat Flores khususnya Manggarai Barat tetap teguh
+            menjaga warisan leluhur yang sarat makna, mulai dari tradisi Caci yang penuh keberanian hingga ritual
+            kehidupan yang mencerminkan kuatnya ikatan adat, kepercayaan, dan kebersamaan dalam kehidupan sehari-hari.
+        </p>
+
+        <!-- ✏️ GANTI: Tanggal dan nama penulis -->
+        <div class="article-meta">
+            14 Mei 2026 &nbsp;·&nbsp; Ditulis oleh <strong>Jesica</strong>
+        </div>
+
+        <!-- ✏️ GANTI: Foto utama — ubah src="foto-betawi.jpg" dengan nama foto kamu -->
+        <div class="article-cover">
+            <img src="foto-betawi.jpg" alt="Foto Wawancara" />
+        </div>
+
+        <!-- ✏️ GANTI: Keterangan foto -->
+        <p class="article-caption">Dokumentasi Wawancara Ervelyn Bersama Pak Hironimus.</p>
+
+        <!-- ISI ARTIKEL -->
+        <div class="article-body">
+
+            <!-- ✏️ GANTI: Paragraf 1 -->
+            <p>
+                Di tengah keberagaman budaya Indonesia, Flores menjadi salah satu daerah yang masih mempertahankan
+                tradisi leluhur dengan kuat. Pulau yang berada di wilayah Nusa Tenggara Timur ini dikenal memiliki
+                kekayaan adat istiadat yang diwariskan turun-temurun. Berdasarkan wawancara dengan narasumber bernama
+                Hironimus, terungkap bagaimana masyarakat Flores, khususnya Manggarai Barat, menjaga budaya mereka di
+                tengah perubahan zaman dan modernisasi
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional, bisa dihapus kalau tidak perlu) -->
+            <h2>Budaya Flores di Tengah Arus Perubahan Zaman </h2>
+
+            <!-- ✏️ GANTI: Paragraf 2 -->
+            <p>
+                Mobilisasi masyarakat dari berbagai daerah menjadi salah satu faktor yang membawa perubahan budaya di
+                Flores. Kehadiran pendatang, termasuk masyarakat dari Jawa, turut menciptakan penyesuaian dalam
+                kehidupan sosial masyarakat setempat. Meski demikian, budaya Flores tetap bertahan karena kecintaan
+                masyarakat terhadap adat istiadat yang diwariskan oleh leluhur.
+            </p>
+
+            <!-- ✏️ GANTI: Kutipan (opsional, bisa dihapus) -->
+            <blockquote>
+                <p>“Budaya di Flores sangat kental karena masyarakatnya sangat mencintai budayanya,” ujar Hironimus
+                    dalam wawancara tersebut. </p>
+            </blockquote>
+
+            <!-- ✏️ GANTI: Paragraf 3 -->
+            <p>
+                Ia menjelaskan bahwa kehidupan masyarakat Flores tidak dapat dipisahkan dari adat. Bahkan dalam kegiatan
+                keagamaan, unsur budaya tetap menyatu. Tradisi menerima tamu hingga menyelesaikan konflik pun sering
+                dilakukan melalui mekanisme adat agar tercipta perdamaian di tengah masyarakat.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Tradisi Caci Sebagai Simbol Sportivitas dan Identitas Budaya </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Salah satu tradisi khas Flores, khususnya di Manggarai Barat, adalah tarian Caci. Tradisi ini merupakan
+                pertunjukan adat yang biasanya dilakukan pada hari-hari khusus dan memiliki makna mendalam bagi
+                masyarakat setempat. Menurut Hironimus, kata Caci berasal dari dua suku kata, yaitu ca yang berarti satu
+                dan ci yang berarti satu, menggambarkan satu orang memukul dan satu orang menangkis. Tradisi ini
+                dilakukan oleh dua laki-laki yang saling berhadapan dalam pertarungan simbolik secara sportif. Alat
+                pukul yang digunakan berupa cambuk dari kulit kerbau yang telah dikeringkan. Jika terkena pukulan,
+                peserta dapat mengalami luka hingga berdarah. Namun, tradisi ini bukan sekadar pertarungan fisik,
+                melainkan simbol keberanian, ketangkasan, dan kehormatan. Pelaksanaan Caci diiringi dengan tarian
+                Danding yang dibawakan oleh laki-laki dan perempuan, serta alunan musik tradisional seperti gendang.
+                Menariknya, setiap peserta yang bertanding, yang disebut Paci, menunjukkan identitas dan ekspresi
+                dirinya masing-masing, sehingga irama lagu yang dimainkan pun dapat berbeda.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Tradisi Penti Sebagai Wujud Syukur atas Hasil Panen </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Selain Caci, masyarakat Manggarai Barat memiliki tradisi penting yang disebut Penti, yaitu upacara
+                syukuran adat atas hasil panen. Tradisi ini menjadi simbol persatuan masyarakat dalam satu kampung.
+                Hironimus menjelaskan bahwa terdapat ungkapan adat “Penti Weki Peso Beo” yang memiliki arti kesatuan
+                masyarakat dalam satu kampung untuk mensyukuri kebaikan Tuhan melalui hasil panen sekaligus memohon
+                kesehatan dan kekuatan. Tradisi Penti memiliki unsur-unsur penting yang tidak dapat dipisahkan, yaitu
+                rumah adat, halaman kampung, compang sebagai tempat persembahan bersama, sumber air masyarakat, dan
+                wilayah pencarian nafkah. Sebelum upacara inti dilaksanakan, biasanya masyarakat terlebih dahulu
+                mengadakan pertunjukan Caci sebagai pembuka acara adat. Mayoritas masyarakat Flores, khususnya Manggarai
+                Barat, menganut agama Katolik, sehingga adat istiadat sering kali berjalan berdampingan dengan
+                nilai-nilai keagamaan.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Ritual Kematian (Penghormatan Terakhir bagi Leluhur) </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Masyarakat Flores juga memiliki tradisi adat yang kuat dalam prosesi kematian. Menurut Hironimus,
+                seseorang yang sedang sakit parah biasanya ditempatkan di ruangan khusus sebagai bentuk perhatian
+                keluarga. Setelah meninggal dunia, dilakukan ritual bernama Manuk Kaengrai, yaitu prosesi adat
+                menggunakan ayam sebagai simbol perpisahan. Ayam tersebut didoakan terlebih dahulu sebelum jenazah
+                dimandikan. Jenazah kemudian diletakkan di depan pintu rumah dengan posisi kepala menghadap ke luar dan
+                kaki berada di dalam rumah. Posisi tersebut melambangkan kesiapan seseorang untuk meninggalkan dunia.
+                Sebelum proses pemakaman berlangsung, keluarga melaksanakan ritual Elah Tekan Tanah, yaitu doa adat
+                menggunakan babi sebagai simbol penghormatan sebelum jenazah dikuburkan. Setelah pemakaman, terdapat
+                tradisi Saung Taah, yang biasanya dilakukan pada hari ketiga atau kelima. Dalam prosesi ini, anggota
+                keluarga laki-laki menjaga rumah duka dan tidak diperbolehkan melakukan aktivitas di luar rumah. Tradisi
+                tersebut diakhiri dengan ritual Cakelas, yaitu simbol pelepasan arwah agar dapat hidup damai di alam
+                lain.
+            </p>
+
+            <!-- ✏️ GANTI: Sub-judul (opsional) -->
+            <h2>Pernikahan Adat Flores </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Dalam adat Flores, pernikahan tidak hanya menyatukan dua individu, tetapi juga dua keluarga besar.
+                Prosesi dimulai dengan tahap pengenalan antara perwakilan keluarga laki-laki dan perempuan untuk
+                membahas keseriusan hubungan kedua calon mempelai. Jika kedua pihak sepakat, maka dilanjutkan dengan
+                prosesi Tukembaru, yaitu pertemuan keluarga besar yang ditandai dengan pertukaran cincin di hadapan
+                keluarga sebagai saksi bahwa hubungan telah direstui. Setelah itu, pasangan akan melangsungkan
+                pemberkatan pernikahan di gereja dan dilanjutkan dengan pesta adat. Prosesi kemudian ditutup dengan
+                <strong>acara Vagal </strong>, yaitu pelaksanaan kewajiban adat yang sebelumnya ditangguhkan oleh pihak
+                keluarga
+                laki-laki.
+            </p>
+
+            <h2>Menjaga Budaya agar Tidak Hilang oleh Zaman </h2>
+
+            <!-- ✏️ GANTI: Paragraf 4 -->
+            <p>
+                Keberadaan budaya Flores yang masih bertahan hingga saat ini menunjukkan besarnya peran masyarakat dalam
+                melestarikan warisan leluhur. Meski mengalami perubahan akibat perkembangan zaman, nilai-nilai adat
+                tetap dijaga sebagai identitas dan pedoman hidup masyarakat. Sebagaimana disampaikan Pak Hironimus,
+                budaya bukan sekadar tradisi, melainkan bagian dari kehidupan sehari-hari yang mempererat hubungan
+                sosial, memperkuat persatuan, dan menjaga keseimbangan antara manusia, adat, dan kepercayaan. Jika terus
+                dijaga dan diwariskan kepada generasi muda, budaya Flores akan tetap hidup di tengah perkembangan dunia
+                modern.
+            </p>
+
+
+        </div>
+
+        <!-- Footer artikel -->
+        <div class="article-footer">
+            Budaya Nusantara &nbsp;·&nbsp; Suku Flores
+        </div>
+
+    </div>
+
+</body>
+
+</html>
